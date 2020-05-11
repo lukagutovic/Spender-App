@@ -1,0 +1,29 @@
+// $primary-color: white;
+// $bg: black;
+// h1 {
+//   color: $primary-color;
+//   background-color: $bg;
+// }
+
+* {
+  margin: 10px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+   Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   background: #ffffff;
+}
+
+
+@mixin global-structure {
+  position: relative;
+  margin: 4% auto;
+  width: 400px;
+  height: 700px;
+  border: 1.5px solid #e6e6ee;
+  border-radius: 8px;
+  overflow: hidden;
+}

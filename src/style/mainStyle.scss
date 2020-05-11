@@ -1,0 +1,37 @@
+@import './variables';
+@import './scrollingBar';
+
+@mixin indexHeader() {
+    margin: 0;
+    position: relative;
+    padding: 25px;
+    height: 350px;
+    width: 100%;
+    line-height: 28px;
+}
+
+.index-header{
+    @include indexHeader();
+    background: $gradient-main;
+    color: $color-white;
+    h1{
+        font-size: 50px;
+        margin-top: 100px;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+
+    }
+    span{
+      color: #eda7a0;
+    }
+    }  
+
+
+    .container {
+        display: flex;
+        
+      }
+      .container > div {
+        flex: 1; /*grow*/
+        
+      }

@@ -1,0 +1,124 @@
+  /* scrolling bars */
+  
+  @import url(https://fonts.googleapis.com/css?family=Rubik);
+  
+  .grid-container {
+    background: $color-deep-red;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  @supports (display: grid) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas: "header header header" "title title footer" "main main main";
+    }
+    @media screen and (max-width: 500px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 1fr auto 1fr;
+        grid-template-areas: "header" "title" "main" "footer";
+      }
+    }
+  
+   
+  .index-wrapper{
+    position: relative;
+    margin: 4% auto;
+    width: 400px;
+    height: 700px;
+    border: 1.5px solid $color-very-light-gray;
+    border-radius: 8px;
+    overflow: hidden;
+    background: $color-dark-grey;
+    font-size: 1em;
+      font-weight: 700;
+      padding: 3.5em 1em; 
+  }
+    .main {
+      color: $color-pink;
+      background-color: rgb(236, 234, 234);
+      grid-area: main;
+      padding: 0;
+    }
+
+    @mixin flexForCategories {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      height: 53%;
+      margin-top: -90px;
+    }
+  
+    .index-body {
+      position: relative;
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      transition: all 0.2s;
+      transform: scale(0.98);
+      will-change: transform;
+      user-select: none;
+      cursor: pointer;
+      font-family: 'Quicksand', sans-serif;
+      @include flexForCategories();
+    }
+  
+  
+  
+    .category-card {
+      display: inline-block;
+      height: 110px;
+      background: $color-white;
+      min-height: 100px;
+      min-width: 150px;
+      margin: 2px;
+      border-radius: 3px;
+      a{
+        color: #333333 !important;
+        text-decoration: none;
+        text-align: center;
+        font-size: 18px;
+      }
+      h5{
+        color: #bbbbbb;
+        font-size: 18px;
+        padding-top: 20px;
+        text-align: center;
+        
+      }
+    }
+    
+  
+    @media screen and (max-width: 500px) {
+      .category-card {
+        min-height: 200px;
+        min-width: 200px;
+      }
+    }
+  }
+  a {
+    display: block;
+    color: #c9e9f6;
+    text-decoration: underline;
+    margin: 1em auto;
+    &hover {
+        cursor: pointer;
+    }
+  }
+  
+  p {
+    text-align: left;
+    text-indent: 20px;
+    font-weight: 100;
+  }
+  
+  i {
+    color: $color-light-blue;
+  }
+
+
+    /* scrolling bars end */

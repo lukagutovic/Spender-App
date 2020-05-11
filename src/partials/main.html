@@ -1,0 +1,30 @@
+<div class="index-wrapper main">
+    <!-- <h1>proba: {{fullname}}</h1> -->
+    <div class="index-header">
+        <h1><span>$</span>{{totalExpenses}}</h1>
+        <!-- <p>New Array: <span id="demo"></span> </p> -->
+        <!-- <button onclick="addNewCategory()">Try me</button> -->
+    </div>
+    <div class="index-body">
+        {{#each categories}}
+            <div class="category-card">
+                <h5>${{totalCost}}</h5>
+                <a href="#/expenses/add/{{id}}">{{title}}</a>
+            </div>
+        {{/each}}
+        <!-- <ul id="myList">
+             </ul> -->
+    </div>
+
+<div>
+    
+    <!-- <div class="parent">
+        {{#each categories}}
+        <div class="child">{{title}}</div>
+        {{/each}}
+      </div> -->
+     
+</div>
+  
+    </div>
+</div>

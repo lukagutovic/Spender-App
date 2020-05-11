@@ -1,0 +1,37 @@
+<div class="category-wrapper">
+  <div class="category-header">
+    <h2> {{category.title}}</h2>
+    <h3 class="current-cost"> Current cost: $ {{category.totalCost}} </h3>
+    <h2><input type="number" id="cost-input" name="cost"> </input></h2>
+    <!-- <h2>$ <span id="new-cost"></span></h2> -->
+    <!-- <button type="button" onclick="backToCategories()" class="action">Go back</button> -->
+  </div>
+  <div class="category-body">
+   <div id="container">  
+    <ul id="keyboard">   
+        <li class="letter" onclick="document.getElementById('cost-input').value=document.getElementById('cost-input').value + '1';" >1</li>  
+        <li class="letter" onclick="document.getElementById('cost-input').value=document.getElementById('cost-input').value + '2';" >2</li>  
+        <li class="letter"  onclick="document.getElementById('cost-input').value=document.getElementById('cost-input').value + '3';" >3</li>  
+        <li class="letter clearl"  onclick="document.getElementById('cost-input').value=document.getElementById('cost-input').value + '4';">4</li>  
+        <li class="letter" onclick="document.getElementById('cost-input').value=document.getElementById('cost-input').value + '5';" >5</li>  
+        <li class="letter" onclick="document.getElementById('cost-input').value=document.getElementById('cost-input').value + '6';" >6</li> 
+      
+        <li class="letter clearl" onclick="document.getElementById('cost-input').value=document.getElementById('cost-input').value + '7';" >7</li>  
+        <li class="letter " onclick="document.getElementById('cost-input').value=document.getElementById('cost-input').value + '8';" >8</li>  
+        <li class="letter" onclick="document.getElementById('cost-input').value=document.getElementById('cost-input').value + '9';" >9</li>  
+
+        <li class="switch" onclick="document.getElementById('cost-input').value=document.getElementById('cost-input').value.slice(0, -1);" >Cancel</li>  
+         <li class="letter" onclick="document.getElementById('cost-input').value=document.getElementById('cost-input').value + '0';" >0</li>
+         <li class="letter" id="addValueFunction" onclick="addToTotal('{{category.id}}')">Add</li> 
+         
+    </ul>  
+</div>  
+
+
+
+    <div class="actions">
+      <!-- <button type="button" onclick="backToCategories()" class="action">Go back</button> -->
+      <!-- <button type="button" onclick="addToTotal('{{category.id}}')" class="action">Add</button> -->
+    </div>
+  </div>
+</div>

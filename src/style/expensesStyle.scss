@@ -1,0 +1,74 @@
+@import './variables';
+@import './globalStyle.scss';
+
+.expenses-wrapper{
+    @include global-structure();
+    padding: 20px;
+    overflow: scroll;
+    background: #5f2c82;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: $color-white;
+    font-weight: 600;
+    h1{
+        font-size: 40px;
+    }
+    li{
+        border: 2px solid rgb(255, 253, 253);
+        background: $color-orange-expenses;
+        padding: 10px;
+        border-radius: 50px;
+        span{
+           color: #862dc2;
+        }
+    }
+}
+
+@mixin float-buttons {
+    margin: 20px;
+    width: 70px;
+    height: 70px;
+    bottom: 40px;
+    right: 40px;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px rgb(97, 95, 95);
+    text-decoration: none;
+    font-size: 40px;
+}
+
+@mixin float-hovers {
+    width: 75px;
+    height: 75px;
+    text-decoration: none;
+    font-size: 45px;
+    transition: ease-in;
+    color: cornsilk;
+}
+
+.float-button {
+    @include float-buttons();
+    background: #FF8008;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
+    float: right;
+    &:hover{
+     @include float-hovers()
+    }
+}
+
+.float-button-left{
+
+    @include float-buttons();
+    background: $color-orange-expenses;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    float: left;
+    &:hover{
+        @include float-hovers()
+    }
+
+}
+

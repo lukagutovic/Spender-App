@@ -1,0 +1,16 @@
+<div class="expenses-main">
+</div>
+<div class="expenses-wrapper">
+   <h1>List of category expenses</h1>
+  <br/>
+  <ul>
+    {{#each history}}
+      <li> <span>Amount spent:</span>  ${{this.amount}}
+        <br>
+        <span>Date:</span> {{this.date}}</li>
+    {{/each}}
+  </ul>
+  <a class="float-button" href='#/category/{{id}}'>+</a>
+  <a class="float-button-left" href='/'>-</a>
+  <!-- <button onclick="deleteItemFromLocalStorage()">DELETE</button> -->
+</div>
